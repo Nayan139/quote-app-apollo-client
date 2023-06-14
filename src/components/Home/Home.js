@@ -10,7 +10,7 @@ const Home = () => {
 
   if (loading) return <h1>Loading...</h1>;
   if (error) {
-    console.log("error", error);
+    console.log("error", error,data);
   }
   return (
     <div className="container-home">
