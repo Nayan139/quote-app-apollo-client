@@ -1,0 +1,57 @@
+.container-profile {
+  margin: 1rem;
+  height: 100vh;
+  width: auto;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 26rem 2rem auto;
+  grid-gap: 20px;
+  grid-template-columns: auto max-content;
+}
+
+.profile {
+  height: 20rem;
+  text-align: center;
+}
+
+.btn-create{
+    height: 2.5rem;
+    width: 10rem;
+    margin: 1rem 0px;
+    cursor: pointer;
+}
+
+h3 {
+  font-weight: unset;
+}
+img {
+  border: 0.2rem solid;
+  border-radius: 500%;
+}
+
+.quote-title {
+  height: 1rem;
+  grid-column: 1;
+  text-align: center;
+  grid-template-columns: auto max-content;
+}
+
+.quotes-list {
+  grid-column: 1;
+}
+
+blockquote {
+  font-size: 1.3rem;
+}
+figcaption {
+  margin: 10px 0px;
+  text-align: right;
+}
+
+
+@media only screen and (max-width: 400px) {
+  h3 {
+    font-size: 1rem;
+  }
+}
+

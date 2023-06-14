@@ -1,0 +1,25 @@
+.createquote-form {
+  height: 25rem;
+  width: 40rem;
+  padding: 1rem;
+  background-color: azure;
+  display: grid;
+  grid-column: auto;
+  row-gap: 1rem;
+}
+
+.createquote-form p {
+  font-size: 1.5rem;
+  align-self: center;
+  justify-self: center;
+}
+
+textarea {
+  padding: 5px 5px;
+  font-size: larger;
+  letter-spacing: 0.05rem;
+  resize: none
+}
+
+
+

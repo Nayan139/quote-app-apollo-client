@@ -1,0 +1,15 @@
+.signup-form {
+  height: 30rem;
+  width: 40rem;
+  padding: 1rem;
+  background-color: azure;
+  display: grid;
+  grid-column: auto;
+  row-gap: 1rem;
+}
+
+.signup-form p {
+    font-size: 1.5rem;
+    align-self: center;
+    justify-self:center
+}

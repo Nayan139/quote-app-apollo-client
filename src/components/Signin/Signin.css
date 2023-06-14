@@ -1,0 +1,39 @@
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signin-form {
+  height: 20rem;
+  width: 30rem;
+  padding: 1rem;
+  background-color: azure;
+  display: grid;
+  grid-column: auto;
+  row-gap: 1rem;
+}
+
+.signin-form p {
+  font-size: 1.5rem;
+  align-self: center;
+  justify-self: center;
+}
+
+input {
+  padding: 5px 5px;
+  font-size: larger;
+  letter-spacing: 0.05rem;
+}
+button {
+  font-size: medium;
+  letter-spacing: 0.05rem;
+}
+
+.link-auth {
+  color: rgb(8, 156, 156);
+  cursor: pointer;
+  font-size: 1rem !important;
+  text-align: left !important;
+}
