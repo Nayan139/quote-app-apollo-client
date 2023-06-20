@@ -13,6 +13,14 @@
   margin: 1rem 0.5rem;
 }
 
+figure{
+  border-left: 0.2rem solid;
+}
+
+blockquote{
+  padding: 0.8rem;
+}
+
 @media only screen and (max-width: 400px) {
   .btn-create {
     height: 2.5rem;

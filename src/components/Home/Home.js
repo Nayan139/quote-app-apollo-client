@@ -1,8 +1,8 @@
 import React from "react";
-import "./Home.css";
 import { useNavigate } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { GET_ALL_QUOTES } from "../../Queries/Queries";
+import "./Home.css";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -10,8 +10,10 @@ const Home = () => {
 
   if (loading) return <h1>Loading...</h1>;
   if (error) {
-    console.log("error", error,data);
+    console.log("error", error);
   }
+
+  console.log("data is here", data);
   return (
     <div className="container-home">
       <div className="quote-title">
@@ -29,33 +31,22 @@ const Home = () => {
         </div>
       </div>
       <div className="quotes-list">
-        <figure>
-          <blockquote>
-            <p>
-              Words can be like X-rays, if you use them properly—they’ll go
-              through anything. You read and you’re pierced.
-            </p>
-          </blockquote>
-          <figcaption>—Aldous Huxley</figcaption>
-        </figure>
-        <figure>
-          <blockquote>
-            <p>
-              Words can be like X-rays, if you use them properly—they’ll go
-              through anything. You read and you’re pierced.
-            </p>
-          </blockquote>
-          <figcaption>—Aldous Huxley</figcaption>
-        </figure>
-        <figure>
-          <blockquote>
-            <p>
-              Words can be like X-rays, if you use them properly—they’ll go
-              through anything. You read and you’re pierced.
-            </p>
-          </blockquote>
-          <figcaption>—Aldous Huxley</figcaption>
-        </figure>
+        {data.quates.length ? (
+          data.quates.map((quote, index) => (
+            <figure key={index}>
+              <blockquote>
+                <p>{quote.name}</p>
+              </blockquote>
+              <figcaption>—{quote.by.firstName}</figcaption>
+            </figure>
+          ))
+        ) : (
+          <figure>
+            <blockquote>
+              <p>No Quotes, yet.</p>
+            </blockquote>
+          </figure>
+        )}
       </div>
     </div>
   );
